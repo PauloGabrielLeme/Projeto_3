@@ -445,3 +445,53 @@ Tarefas_armazem *exportar_prioridade_categoria(Tarefas_armazem *lista){
     }
 
 }
+
+Tarefas_armazem *alterar(Tarefas_armazem *lista){
+    int c=0;
+    if (lista->tam == 0) {
+        printf("\n====================\n");
+        printf("Lista de tarefas vazia....\n");
+        printf("====================\n");
+        return lista;
+    } else {
+        Tarefas_armazem *lista_temp = (Tarefas_armazem *)malloc(
+                100 * sizeof(Tarefas_armazem)); // Criacao de um array de struct de
+        // struct temporario
+
+        listar_tarefas(lista); // Lista todas as tarefas para o usuario escolher
+        // qual deseja deletar
+
+        int tamanho = lista->tam; // Declara a variavel tamanho para guardar o
+        // tamanho atual da struct
+
+        int indice;
+
+        printf("\nDigite o numero da tarefa que deseja alterar: ");
+        scanf("%d", &indice); // Variavel que vai receber o valor que o usuario
+        // deseja deletar
+        while ((c = getchar()) != '\n' && c != EOF) { }
+
+        for(int i=0;i<tamanho;i++){
+            int buffer;
+            if(i == indice-1){
+               printf("====================\n");
+               printf("Digite A Nova Prioridade (1-10): ");
+               scanf("%d",&lista->tarefas[i].prioridade);
+               while ((c = getchar()) != '\n' && c != EOF) { }
+               printf("Digite A Nova Categoria: ");
+               input(lista->tarefas[i].categoria);
+               printf("Digite A Nova Descricao: ");
+               input(lista->tarefas[i].descricao);
+               printf("Digite O Novo Status: ");
+               input(lista->tarefas[i].status);
+               break;
+            }
+
+        }
+        printf("Tarefa Mudada Com Sucesso!\n");
+        printf("====================\n");
+
+
+    }
+
+}
