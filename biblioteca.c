@@ -180,5 +180,9 @@ Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista){
 }
 
 char *input(char *str) { //Funcao para receber strings sem dar bugs
-    
+    int c;
+    scanf("%[^\n]s", str); //Recebe o array de chars/string
+    while ((c = getchar()) != '\n' && c != EOF) {} //Impede Que Sejam Pulados input futuros após ser pressionada a tecla "enter"
+
+    return str;
 }
