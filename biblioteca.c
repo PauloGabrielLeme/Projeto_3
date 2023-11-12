@@ -2,11 +2,20 @@
 
 void lobby() { // Funcao que demonstra ao usuarios todas as opcoes que ele pode
     // utilizar no aplicativo
-    printf("\n1 - Cadastrar nova tarefa\n");
-    printf("2 - Listar tarefas ja criadas\n");
-    printf("3 - Deletar uma terefa\n");
-    printf("4 - Fechar programa\n");
+    printf("\n1 - Cadastrar Nova Tarefa\n");
+    printf("2 - Listar Tarefas Ja Criadas\n");
+    printf("3 - Deletar Uma Tarefa\n");
+    printf("4 - Alterar Tarefa\n");
+    printf("5 - Filtrar Por Prioridade\n");
+    printf("6 - Filtrar Por Categoria\n");
+    printf("7 - Filtrar Por Status Da Tarefa\n");
+    printf("8 - Filtrar Por Prioridade E Categoria\n");
+    printf("9 - Exportar Lista Para Um Arquivo Por Categoria\n");
+    printf("10 - Exportar Lista Para Um Arquivo Por Prioridade\n");
+    printf("11 - Exportar Lista Para Um Arquivo Por Prioridade E Categoria\n");
+    printf("12 - Encerrar Programa\n");
     printf("\nDigite o numero da opcao desejada: ");
+
 }
 
 Tarefas_armazem *leitura(char *nome) {
