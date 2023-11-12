@@ -178,3 +178,7 @@ Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista){
     }
 
 }
+
+char *input(char *str) { //Funcao para receber strings sem dar bugs
+    
+}
