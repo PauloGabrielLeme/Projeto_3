@@ -308,5 +308,42 @@ Tarefas_armazem *filtrar_prioridade_categoria(Tarefas_armazem *lista){
 }
 
 Tarefas_armazem *exportar_prioridade(Tarefas_armazem *lista){
-    
+    int p=0; //Variavel da prioridade que o usuário deseja exportar
+    //Todas as tarefas que forem de mesma categoria à p serão listadas
+    //Senão serão ignoradas
+    printf("Digite A Prioridade Da(s) Tarefas A Serem Exportadas: ");
+    scanf("%d",&p);
+
+    FILE *f = fopen("lista_prioridade.txt","w");
+
+    if(lista->tam==0){
+        printf("\n====================\n");
+        printf("Lista de tarefas vazia....\n");
+        printf("====================\n");
+        return lista;       
+    }
+    else{
+        printf("======================\n");
+        fprintf(f,"\n====================\n");
+        fprintf(f,"Lista Tarefas De Prioridade '%d': \n",p);
+        for (int i = 0; i < lista->tam;i++) {
+          
+        // Realiza um for que vai iterar ate o tamanho atual da lista de
+        // tarefas que vai realizando o print de cada tarefa
+            if(lista->tarefas[i].prioridade==p){
+                fprintf(f,"Tarefa - %d\n", i + 1);
+                fprintf(f,"Prioridade: %d\n", lista->tarefas[i].prioridade);
+                fprintf(f,"Categoria: %s\n", lista->tarefas[i].categoria);
+                fprintf(f,"Descricao: %s\n", lista->tarefas[i].descricao);
+                fprintf(f,"Status: %s\n",lista->tarefas[i].status);
+                fprintf(f,"======================\n");
+            }
+        }
+        fclose(f);
+        printf("Dados Exportados Com Sucesso!\n");
+        printf("====================\n");
+
+    }
+
+
 }
