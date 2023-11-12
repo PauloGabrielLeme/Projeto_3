@@ -35,6 +35,7 @@ Como Usar
 Autor
 
 Paulo Gabriel Gonçalves Leme - R.A: 24.123.075-4
+
 Avisos
 
     Certifique-se de salvar suas tarefas antes de encerrar o programa para evitar perda de dados.
