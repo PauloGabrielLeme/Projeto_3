@@ -36,6 +36,7 @@ int main(){
           // tarefas ja criadas pelo usuario
     } 
     else if(s == 4){
+      alterar(lista_tarefas);
     }
     else if(s==5){
       filtrar_prioridade(lista_tarefas);
