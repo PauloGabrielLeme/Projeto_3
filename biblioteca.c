@@ -145,5 +145,36 @@ Tarefas_armazem *deletarTarefa(Tarefas_armazem *lista) {
 }
 
 Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista){
-    
+    int p=0; 
+    //Todas as tarefas que forem de prioridade igual à p serão listadas
+    //Senão serão ignoradas
+    printf("Digite A Prioridade Da(s) Tarefas A Serem Listadas: ");
+    scanf("%d",&p); 
+
+    if(lista->tam==0){
+        printf("\n====================\n");
+        printf("Lista de tarefas vazia....\n");
+        printf("====================\n");
+        return lista;       
+    }
+    else{
+        printf("======================\n");
+        printf("\n====================\n");
+        printf("Lista Tarefas De Prioridade %d: \n",p);
+        for (int i = 0; i < lista->tam;i++) {
+        // Realiza um for que vai iterar ate o tamanho atual da lista de
+        // tarefas que vai realizando o print de cada tarefa
+            if(lista->tarefas[i].prioridade==p){
+                printf("Tarefa - %d\n", i + 1);
+                printf("Prioridade: %d\n", lista->tarefas[i].prioridade);
+                printf("Categoria: %s\n", lista->tarefas[i].categoria);
+                printf("Descricao: %s\n", lista->tarefas[i].descricao);
+                printf("Status: %s\n",lista->tarefas[i].status);
+                printf("====================\n");
+            }
+        }
+        printf("====================\n");
+
+    }
+
 }
