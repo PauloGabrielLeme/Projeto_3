@@ -20,3 +20,4 @@ void escreve(Tarefas_armazem *v, char *nome);
 Tarefas_armazem *cadastrarTarefa(Tarefas_armazem *lista);
 Tarefas_armazem *deletarTarefa(Tarefas_armazem *lista);
 void listar_tarefas(Tarefas_armazem *lista);
+Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista);

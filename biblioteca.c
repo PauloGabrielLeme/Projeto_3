@@ -143,3 +143,7 @@ Tarefas_armazem *deletarTarefa(Tarefas_armazem *lista) {
         // desejou excluida
     }
 }
+
+Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista){
+    
+}
