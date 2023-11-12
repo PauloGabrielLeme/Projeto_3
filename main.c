@@ -36,28 +36,35 @@ int main(){
           // tarefas ja criadas pelo usuario
     } 
     else if(s == 4){
-      alterar(lista_tarefas);
+      alterar(lista_tarefas);//Altera Uma Tarefa Dentro Da Lista
     }
     else if(s==5){
-      filtrar_prioridade(lista_tarefas);
-    }
+      filtrar_prioridade(lista_tarefas); //Lista Todas as Tarefas, mas somente
+    }                                    //de prioridade desejada pelo usuario
     else if(s==6){
-      filtrar_categoria(lista_tarefas);
-    } 
+      filtrar_categoria(lista_tarefas); //Lista Todas as Tarefas, mas somente
+    }                                   //de categoria desejada pelo usuario
     else if(s==7){
-      filtrar_status(lista_tarefas);
-    }
+      filtrar_status(lista_tarefas); //Lista Todas as Tarefas, mas somente
+    }                                //de status desejado pelo usuario
     else if(s==8){
-      filtrar_prioridade_categoria(lista_tarefas);
-    }
+      filtrar_prioridade_categoria(lista_tarefas); //Lista Todas as Tarefas, mas
+    }                                              // de prioridade e categoria
+                                                   //desejadas pelo usuário
     else if(s==9){
-      exportar_categoria(lista_tarefas);
+      exportar_categoria(lista_tarefas); //Exporta A Lista Para Um arquivo .txt,
+                                         //mas somente os itens de categoria
+                                         //desejada pelo usuário
     }
     else if(s==10){
-      exportar_prioridade(lista_tarefas);
+      exportar_prioridade(lista_tarefas); //Exporta A Lista Para Um arquivo .txt,
+                                          //mas somente os itens de prioridade
+                                          //desejada pelo usuário
     }
     else if(s==11){
-      exportar_prioridade_categoria(lista_tarefas);
+      exportar_prioridade_categoria(lista_tarefas); //Exporta A Lista Para Um                                                          arquivo .txt,
+                                                    //mas somente os itens de                                                           prioridade e categoria
+                                                    //desejadas pelo usuário
     }
     else if(s==12){
       escreve(lista_tarefas,"lista.txt"); 
