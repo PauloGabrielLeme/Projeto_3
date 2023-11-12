@@ -25,3 +25,4 @@ char *input(char *str);
 Tarefas_armazem *filtrar_categoria(Tarefas_armazem *lista);
 Tarefas_armazem *filtrar_status(Tarefas_armazem *lista);
 Tarefas_armazem *filtrar_prioridade_categoria(Tarefas_armazem *lista);
+Tarefas_armazem *exportar_prioridade(Tarefas_armazem *lista);
