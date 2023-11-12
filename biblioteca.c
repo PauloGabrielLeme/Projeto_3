@@ -349,6 +349,44 @@ Tarefas_armazem *exportar_prioridade(Tarefas_armazem *lista){
 }
 
 Tarefas_armazem *exportar_categoria(Tarefas_armazem *lista){
+    char p[300];//Variavel da categoria que o usuário deseja exportar
+    int c;
+    int cmp; //Faz as comparações de strings 0 significa igual, outros         valores diferentes
+    //Todas as tarefas que forem de mesma categoria à p serão listadas
+    //Senão serão ignoradas
+    printf("Digite A Categoria Da(s) Tarefas A Serem Exportadas: ");
+    while ((c = getchar()) != '\n' && c != EOF) {}
+    input(p);
 
-    
+    FILE *f = fopen("lista_categoria.txt","w");
+  
+    if(lista->tam==0){
+        printf("\n====================\n");
+        printf("Lista de tarefas vazia....\n");
+        printf("====================\n");
+        return lista;       
+    }
+    else{
+        printf("======================\n");
+        fprintf(f,"\n====================\n");
+        fprintf(f,"Lista Tarefas De Categoria '%s': \n",p);
+        for (int i = 0; i < lista->tam;i++) {
+          cmp=strcmp(lista->tarefas[i].categoria,p);//Compração das strings
+        // Realiza um for que vai iterar ate o tamanho atual da lista de
+        // tarefas que vai realizando o print de cada tarefa
+            if(cmp==0){
+                fprintf(f,"Tarefa - %d\n", i + 1);
+                fprintf(f,"Prioridade: %d\n", lista->tarefas[i].prioridade);
+                fprintf(f,"Categoria: %s\n", lista->tarefas[i].categoria);
+                fprintf(f,"Descricao: %s\n", lista->tarefas[i].descricao);
+                fprintf(f,"Status: %s\n",lista->tarefas[i].status);
+                fprintf(f,"======================\n");
+            }
+        }
+        fclose(f);
+        printf("Dados Exportados Com Sucesso!\n");
+        printf("====================\n");
+
+    }
+  
 }
