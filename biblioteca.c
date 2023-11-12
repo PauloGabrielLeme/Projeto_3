@@ -186,3 +186,7 @@ char *input(char *str) { //Funcao para receber strings sem dar bugs
 
     return str;
 }
+
+Tarefas_armazem *filtrar_categoria(Tarefas_armazem *lista){
+    
+}
