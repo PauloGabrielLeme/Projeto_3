@@ -1,4 +1,3 @@
-//Gabriel Albertini Pinheiro - R.A: 24.123.004-4
 //Paulo Gabriel Gonçalves Leme - R.A: 24.123.075-4
 
 #include "biblioteca.h"

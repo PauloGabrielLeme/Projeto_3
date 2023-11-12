@@ -24,3 +24,4 @@ Tarefas_armazem *filtrar_prioridade(Tarefas_armazem *lista);
 char *input(char *str);
 Tarefas_armazem *filtrar_categoria(Tarefas_armazem *lista);
 Tarefas_armazem *filtrar_status(Tarefas_armazem *lista);
+Tarefas_armazem *filtrar_prioridade_categoria(Tarefas_armazem *lista);
