@@ -445,3 +445,7 @@ Tarefas_armazem *exportar_prioridade_categoria(Tarefas_armazem *lista){
     }
 
 }
+
+Tarefas_armazem *alterar(Tarefas_armazem *lista){
+    
+}
